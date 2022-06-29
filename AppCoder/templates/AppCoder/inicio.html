@@ -1,0 +1,38 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <h1>Bienvenidos al mundo del deporte</h1>
+    <br>
+    <br>
+
+    <h3>Busca algun club o deporte!</h3>
+
+    <form action="/AppCoder/buscar/" method="GET">
+
+        <input type="deporte" name="futbol" id="futbol">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    
+
+    {% if Futbol %}
+
+    <p>Estamos buscando el: {{club}}</p>
+
+    <ul>
+	{% for curso in cursos %}
+		<li> {{futbol.integrantes}} </li>
+		<li> {{futbol.club}} </li>
+	{% endfor %}
+
+    </ul>
+   
+    {% endif %}
+
+{% endblock %}
