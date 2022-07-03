@@ -4,29 +4,23 @@
 
 {% block contenidoQueCambia %}
 
-    <h1>Formulario para Futbol</h1>
+    <h1>Formulario de Rugby - Contanos sobre tu gran grupo!</h1>
     
     {% if miFormulario.errors %}
-
-    <p style="color: red;"> Están mal los datos, revisar</p>
+     
+    <p style="color:red;">Estan mal los datos, revisar.</p>
 
     {% endif %}
 
-
     <form action="" method="POST">{% csrf_token %}
 
-        
         <table>
 
             {{ miFormulario.as_table }}
-
-
+            
         </table>
 
 
-        <input type="submit", value="Enviar">
-
-    </form>
-
-  
+        <input type="submit" value="Enviar">
+    </form>    
 {% endblock %}

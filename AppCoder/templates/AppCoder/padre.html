@@ -10,28 +10,34 @@
     <meta name="author" content="" />
     <title>Inicio</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{%static 'AppCoder/assets/favicon.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'AppCoder/assets/favicon.ico' %}" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{%static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+    <link href="{% static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
 
 </head>
 <body>
-      <!-- Navigation-->
-      <nav class="navbar navbar-light bg-light static-top">
+    <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>´
-            <a class="navbar-brand" href="{% url 'Hockey' %}">Hockey</a>
-            <a class="navbar-brand" href="{% url 'Futbol' %}">Futbol</a>
-            <a class="navbar-brand" href="{% url 'Rugby' %}">Rugby</a>
-            <a class="navbar-brand" href="{% url 'Buscar' %}">Buscar</a>
+            <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+            <a class="navbar-brand" href="{% url 'HockeyFormulario' %}">Hockey</a>
+            <a class="navbar-brand" href="{% url 'FutbolFormulario' %}">Futbol</a>
+            <a class="navbar-brand" href="{% url 'RugbyFormulario' %}">Rugby</a>
+            <a class="navbar-brand" href="{% url 'BuscarFutbol' %}">Busca tu club de futbol</a>
             <a class="btn btn-primary" href="#NADAAUN">INICIAR</a>
         </div>
     </nav>
-
+    <div class="row">
+        <div class="col">
+            <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Busca un producto" data-sb-validations="required,email" />
+            <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+            <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+        </div>
+        <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+    </div>      
 
     <!-- Masthead-->
     <header class="masthead">
@@ -40,31 +46,20 @@
                 <div class="col-xl-6">
                     <div class="text-center text-white">
                         <!-- Page heading-->
-                        <h1 class="mb-5">Nuestra web Intermedia de Django - CoderHouse</h1>
-                        <!-- Signup form-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
+                        <h1 class="mb-5">Centro de deportes de Buenos Aires</h1>
+
+                        <h1 class="mb-2">Estamos reclutando equipos para volverlos grandes profesionales!</h1>
+                        
                        
                     </div>
                 </div>
             </div>
         </div>
     </header>
-   
-
-
-    <!-- Esto es lo que va a cambiar-->
-
+    
     {% block contenidoQueCambia %}
 
     {% endblock %}
-
-
     
  
     <!-- Footer-->
@@ -76,6 +71,7 @@
                         <li class="list-inline-item"><a href="#!">Ayuda</a></li>
                         <li class="list-inline-item">⋅</li>
                         <li class="list-inline-item"><a href="#!">Contacto</a></li>
+                        <li class="list-inline-item"><a href="#!">Hola chicos!!</a></li>
                   
                     </ul>
                     <p class="text-muted small mb-4 mb-lg-0">&copy; Curso de Python - CoderHouse.</p>
@@ -104,6 +100,7 @@
     <!-- * *                               SB Forms JS                               * *-->
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>   
+
 </body>
 </html>
